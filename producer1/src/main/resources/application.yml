@@ -1,0 +1,15 @@
+server:
+  port: 8101
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+spring:
+  application:
+    name: producer
+
+
+
