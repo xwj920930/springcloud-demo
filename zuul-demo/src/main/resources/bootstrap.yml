@@ -1,0 +1,8 @@
+#spring:         //bootstrap与application区别见readme.md
+#  application:
+#    name: cloud
+#  cloud:
+#    config:
+#      uri: http://10.1.1.1:8888,http://10.1.1.2:8888  #多服务器集群
+#      username: admin
+#      password: admin
