@@ -37,9 +37,9 @@ public class MyFilter extends ZuulFilter{
         // 2) 从上下文中获取request对象
         HttpServletRequest req = ctx.getRequest();
         // 3) 从请求中获取token
-        String token = req.getParameter("xwj");
+        String token = req.getParameter("name");
         // 4) 判断
-        if(token != null&&!"".equals(token.trim())){
+        if(token == null || !"xwj".equals(token.trim())){
             // 没有token，登录校验失败，拦截
             ctx.setSendZuulResponse(false);
             // 返回401状态码。也可以考虑重定向到登录页。
